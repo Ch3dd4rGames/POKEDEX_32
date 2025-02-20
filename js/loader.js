@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
     let percentage = 0;
-    let deltaTime = 30;
+    let deltaTime = 10;
 
     // Función que simula la carga de la web
     function simulatedLoad()
@@ -10,7 +10,7 @@ $(document).ready(function()
         {
             percentage++;
             $(".loader-text .percentage").text(percentage + "%");
-            setTimeout(simulatedLoad, 30);
+            setTimeout(simulatedLoad, deltaTime);
         }
         else
         {

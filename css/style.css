@@ -70,7 +70,7 @@ h1
     z-index: 9999;
 }
 
-#loader-content
+.loader-content
 {
     text-align: center;
     color: aliceblue;
@@ -84,4 +84,10 @@ h1
 #content
 {
     display: none;
+}
+
+#content #model
+{
+    width: 100%;
+    height: 45vh;
 }
