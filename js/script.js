@@ -5,10 +5,15 @@ $(document).ready(function()
     $pokeCont.isotope(
     {
         itemSelector: ".card",
-        layoutMode: "fitRows"
+        layoutMode: "fitRows",
+        getSortData: 
+        {
+            name: ".name",
+            number: ".number parseInt"
+        }
     });
 
-    $(".btns-cont button").on("click", function()
+    $(".btns-cont .filter").on("click", function()
     {
         let filterVal = $(this).data("filter");
         $pokeCont.isotope(
@@ -18,8 +23,14 @@ $(document).ready(function()
     });
 
     // INSTRUCCIONES:
-
     // Botón "Todos"
-
     // Botones de orden: por número y orden alfabético
+    $(".btns-cont .sort").on("click", function()
+    {
+        let sortByValue = $(this).data("sortby");
+        $pokeCont.isotope(
+        {
+            sortBy: sortByValue
+        })
+    });
 });
